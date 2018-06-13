@@ -18,10 +18,10 @@ export const mutations = {
 };
 
 export const actions = {
-  postUser({ commit }, { name, password, confirmationPassword }) {
+  postUser({ commit }, { email, password, confirmationPassword }) {
     commit('clearErrorMessage');
     request
-      .post('signup', { name, password, confirmationPassword })
+      .post('signup', { email, password, confirmationPassword })
       .then(response => {
         commit('setNoticeMessage', '会員登録が完了しました。');
         this.$router.replace({ path: '/' });

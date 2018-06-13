@@ -34,7 +34,7 @@ export default {
   methods: {
     postUser() {
       this.$store.dispatch('user/postUser', {
-        name: this.formUserName,
+        email: this.formUserName,
         password: this.formPassword,
         confirmationPassword: this.formConfirmPassword
       });
