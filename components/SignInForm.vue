@@ -31,7 +31,7 @@ export default {
   methods: {
     signInUser() {
       this.$store.dispatch('user/signInUser', {
-        name: this.formUserName,
+        email: this.formUserName,
         password: this.formPassword
       })
     }

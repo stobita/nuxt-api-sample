@@ -31,10 +31,10 @@ export const actions = {
         commit('setErrorMessage', '会員登録に失敗しました。');
       });
   },
-  signInUser({ commit }, { name, password }) {
+  signInUser({ commit }, { email, password }) {
     commit('clearErrorMessage');
     request
-      .post('signin', { name, password })
+      .post('signin', { email, password })
       .then(response => {
         localStorage.setItem('jwt', response.data.token);
         commit('setNoticeMessage', 'ログインに成功しました。');
