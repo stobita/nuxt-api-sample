@@ -1,4 +1,3 @@
-# docker-compose run app vue init nuxt-community/starter-template <project-name>
 # docker-compose run app npm install
 # docker-compose up -d
 
