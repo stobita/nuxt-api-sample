@@ -6,7 +6,7 @@ services:
   app:
     build: ./containers/nuxt
     working_dir: /app/sample
-    command: npm run dev
+    command: npm run start
     volumes:
       - "./:/app"
     ports:
