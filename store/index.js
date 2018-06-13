@@ -30,5 +30,5 @@ export const getters = {
 };
 
 const request = axios.create({
-  baseURL: 'http://localhost:8085'
+  baseURL: 'http://docker-practice-s.tk:8085'
 });
