@@ -1,0 +1,18 @@
+{
+  "name": "api-test",
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3333"
+    }
+  },
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "node-sass": "^4.9.0",
+    "nuxt": "^1.4.0",
+    "sass-loader": "^7.0.3"
+  }
+}

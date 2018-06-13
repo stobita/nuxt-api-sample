@@ -1,0 +1,28 @@
+# docker-compose run app vue init nuxt-community/starter-template <project-name>
+# docker-compose run app npm install
+# docker-compose up -d
+
+version: "3.4"
+services:
+  app:
+    build: ./containers/nuxt
+    working_dir: /app/sample
+    command: npm run dev
+    volumes:
+      - "./:/app"
+    ports:
+      - "3000:3000"
+    container_name: "nuxt"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      start_period: "40s"
+      interval: "1m30s"
+      timeout: "10s"
+      retries: 3
+  web:
+    build: ./containers/nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    container_name: "nginx"
