@@ -37,6 +37,7 @@ export const actions = {
       .post('signin', { email, password })
       .then(response => {
         localStorage.setItem('jwt', response.data.token);
+        setToken(request)
         commit('setNoticeMessage', 'ログインに成功しました。');
         this.$router.replace({ path: '/' });
       })

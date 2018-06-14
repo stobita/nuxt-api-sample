@@ -63,5 +63,15 @@ export default {
       border: 1px solid #CCC
       padding: 10px
       border-radius: 8px
+    button
+      background-color: transparent
+      border: none
+      cursor: pointer
+      outline: none
+      padding: 0
+      appearance: none
+      border: 1px solid #CCC
+      padding: 5px
+      border-radius: 4px
 
 </style>

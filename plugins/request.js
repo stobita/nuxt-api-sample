@@ -1,13 +1,8 @@
 import axios from 'axios';
 
 const request = axios.create({
-  baseURL: 'http://docker-practice-s.tk:8085'
+  baseURL: 'http://docker-practice-s.tk:8085',
+  headers: {'Authorization': 'Bearer ' + localStorage.getItem('jwt')}
 });
-
-export const setToken = token => {
-  localStrage.setItem('jwt', token);
-};
-
-export const initToken = () => {};
 
 export default request;
